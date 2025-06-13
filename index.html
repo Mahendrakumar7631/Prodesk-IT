@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toggle-container">
+        <label class="switch">
+            <span class="toggle-label"></span>
+            <span class="toggle-label"></span>
+            <input type="checkbox" id="theme-toggle" title="Toggle dark/light mode">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to the <span>Frontend Quiz!</span></h1>
+            <p>Pick a subject to get started.</p>
+        </div>
+        <div class="buttons">
+            <button class="quiz-btn">
+                <span class="icon html-icon"></span>
+                HTML
+            </button>
+            <button class="quiz-btn">
+                <span class="icon css-icon"></span>
+                CSS
+            </button>
+            <button class="quiz-btn">
+                <span class="icon js-icon"></span>
+                Javascript
+            </button>
+            <button class="quiz-btn">
+                <span class="icon accessibility-icon"></span>
+                Accessibility
+            </button>
+        </div>
+    </div>
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('change', () => {
+            document.body.classList.toggle('bright-mode');
+        });
+    </script>
+</body>
+</html>
